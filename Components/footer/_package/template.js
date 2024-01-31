@@ -1,0 +1,1 @@
+var oc=oc||{};oc.components=oc.components||{},oc.components["88b4445b87fc93f42ad49e24d74b802e0834393d"]=function(o){var e=[];return e.push('<div style="background-color:  #3b246c; color: #ffffff; margin-top: 30px; padding: 30px; display: flex; flex: 1; flex-direction: row; justify-content: space-between"><h1>Footer</h1><h3>Footer in Jade</h3></div>'),e.join("")};
