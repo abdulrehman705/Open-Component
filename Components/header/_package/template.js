@@ -1,4 +1,4 @@
-var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f616a42f2450a5f3b3b5a5']=function(model) {
+var oc=oc||{};oc.components=oc.components||{};oc.components['16ad908d23625e0d2f852c718fa64c8bfed66b3e']=function(model) {
     var __toOcStaticPathUrl = function(args) {
       return model.component.props._staticPath + 'public/' + args;
     } 
@@ -7,10 +7,10 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f
     var __$$oc_Settings__ = {id: model.id, staticPath: _staticPath, baseUrl: _baseUrl, name: _componentName, version: _componentVersion};
     var innerFn = function(model){
   oc.vueComponents = oc.vueComponents || {};
-  oc.vueComponents['721a94435a827af0819dddc8393bc0e8ec4f09ff'] = oc.vueComponents['721a94435a827af0819dddc8393bc0e8ec4f09ff'] || ((function() {
+  oc.vueComponents['331df6b0ee876c129632c72d595ddb5f701bf388'] = oc.vueComponents['331df6b0ee876c129632c72d595ddb5f701bf388'] || ((function() {
     var clientBundle = function(vue) {
   "use strict";
-  const _withScopeId = (n) => (vue.pushScopeId("data-v-da57fe61"), n = n(), vue.popScopeId(), n);
+  const _withScopeId = (n) => (vue.pushScopeId("data-v-c0bada8a"), n = n(), vue.popScopeId(), n);
   const _hoisted_1 = { className: "container" };
   const _hoisted_2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ vue.createElementVNode(
     "h1",
@@ -26,22 +26,27 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f
     -1
     /* HOISTED */
   ));
+  const _hoisted_4 = {
+    className: "button",
+    id: "count"
+  };
   const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     __name: "App",
     setup(__props) {
-      const count = vue.ref(0);
+      let count = window.oc.cart.count;
+      window.oc.events.on("cartChange", () => {
+        count = window.oc.cart.count;
+        document.getElementById("count").innerText = "Picture Change " + count + " Time";
+      });
       return (_ctx, _cache) => {
         return vue.openBlock(), vue.createElementBlock("div", null, [
           vue.createElementVNode("div", _hoisted_1, [
             _hoisted_2,
             _hoisted_3,
             vue.createElementVNode(
-              "button",
-              {
-                className: "button",
-                onClick: _cache[0] || (_cache[0] = ($event) => count.value++)
-              },
-              "Count is: " + vue.toDisplayString(count.value),
+              "div",
+              _hoisted_4,
+              "Picture Change " + vue.toDisplayString(vue.unref(count)) + " Time",
               1
               /* TEXT */
             )
@@ -57,7 +62,7 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f
     }
     return target;
   };
-  const View = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-da57fe61"]]);
+  const View = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-c0bada8a"]]);
   function renderer(props, element, ssr) {
     const { _staticPath, _baseUrl, _componentName, _componentVersion, ...rest } = props;
     function _getData(providerProps, parameters, cb) {
@@ -117,7 +122,7 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f
   var staticPath = model.component.props._staticPath;
   if (ssr) {
     externals.push({
-      global: ['oc', 'components', 'fa6b4ef82786790560f616a42f2450a5f3b3b5a5'],
+      global: ['oc', 'components', '16ad908d23625e0d2f852c718fa64c8bfed66b3e'],
       url: staticPath + 'template.js',
       name: "template"
     });
@@ -128,21 +133,21 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fa6b4ef82786790560f
   var count = oc.__vueTemplate.count;
   var templateId = "oc-vueRoot-header-" + count;
   oc.__vueTemplate.count++;
-  var ssrCall = 'oc.components["fa6b4ef82786790560f616a42f2450a5f3b3b5a5"]({ component: { props:' + props + ' } });';
+  var ssrCall = 'oc.components["16ad908d23625e0d2f852c718fa64c8bfed66b3e"]({ component: { props:' + props + ' } });';
 
   return '<div id="' + templateId + '" class="oc-vueRoot-header">' + modelHTML + '</div>' +
-    '<style>.container[data-v-da57fe61] {  background-color: #3b246c;  color: #fff;  font-family: sans-serif;  padding: 40px;  flex-direction: row;  display: flex;  justify-content: space-between;}.button[data-v-da57fe61] {  background-color: #a97613;  border: none;  padding: 15px 32px;  text-align: center;  font-size: 16px;  margin-left: 30px;  text-decoration: none;  display: inline-block;  color: inherit;  cursor: pointer;}h1[data-v-da57fe61] {  margin: 0 0 20px 0;}</style>' +
+    '<style>.container[data-v-c0bada8a] {  background-color: #3b246c;  color: #fff;  font-family: sans-serif;  padding: 40px;  flex-direction: row;  display: flex;  justify-content: space-between;}.button[data-v-c0bada8a] {  background-color: #a97613;  border: none;  padding: 20px 32px;  text-align: center;  font-size: 16px;  margin-left: 30px;  text-decoration: none;  display: inline-block;  color: inherit;  cursor: pointer;}h1[data-v-c0bada8a] {  margin: 0 0 20px 0;}</style>' +
     '<script>' +
     'oc = oc || {};' +
     'oc.cmd = oc.cmd || [];' +
     'oc.cmd.push(function(oc){' +
-    'oc.events.fire(\'oc:cssDidMount\', \'.container[data-v-da57fe61] {  background-color: #3b246c;  color: #fff;  font-family: sans-serif;  padding: 40px;  flex-direction: row;  display: flex;  justify-content: space-between;}.button[data-v-da57fe61] {  background-color: #a97613;  border: none;  padding: 15px 32px;  text-align: center;  font-size: 16px;  margin-left: 30px;  text-decoration: none;  display: inline-block;  color: inherit;  cursor: pointer;}h1[data-v-da57fe61] {  margin: 0 0 20px 0;}\');' +
+    'oc.events.fire(\'oc:cssDidMount\', \'.container[data-v-c0bada8a] {  background-color: #3b246c;  color: #fff;  font-family: sans-serif;  padding: 40px;  flex-direction: row;  display: flex;  justify-content: space-between;}.button[data-v-c0bada8a] {  background-color: #a97613;  border: none;  padding: 20px 32px;  text-align: center;  font-size: 16px;  margin-left: 30px;  text-decoration: none;  display: inline-block;  color: inherit;  cursor: pointer;}h1[data-v-c0bada8a] {  margin: 0 0 20px 0;}\');' +
       'oc.requireSeries(' + JSON.stringify(externals) + ', function(){' +
         'var targetNode = document.getElementById("' + templateId + '");' +
         'targetNode.setAttribute("id","");' +
         (ssr ? ssrCall : '') +
-        'oc.components["fa6b4ef82786790560f616a42f2450a5f3b3b5a5"]({ component: { props:' + props + ' } });' +
-        'oc.vueComponents["721a94435a827af0819dddc8393bc0e8ec4f09ff"](' + props + ', targetNode, ' + !!modelHTML  + ');' +
+        'oc.components["16ad908d23625e0d2f852c718fa64c8bfed66b3e"]({ component: { props:' + props + ' } });' +
+        'oc.vueComponents["331df6b0ee876c129632c72d595ddb5f701bf388"](' + props + ', targetNode, ' + !!modelHTML  + ');' +
       '});' +
     '});' +
   '</script>'

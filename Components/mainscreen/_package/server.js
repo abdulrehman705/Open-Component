@@ -146,7 +146,7 @@ const data = (context, callback) => {
     const srcPath = srcPathHasProtocol ? context.staticPath : "https:" + context.staticPath;
     return callback(null, Object.assign({}, {
       component: {
-        key: "b58146efe5a130745804a9bb7b38489f0978d0a3",
+        key: "7624788fde185ef947c067df0be5e3821de3f7dc",
         src: srcPath + "template.js",
         props
       }

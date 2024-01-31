@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const count = ref(0)
+
+let count = window.oc.cart.count;
+
+window.oc.events.on('cartChange', () => {
+  count = window.oc.cart.count;
+  document.getElementById('count').innerText = "Picture Change" + " " + count + " " + "Time";
+});
 </script>
 
 <template>
@@ -8,7 +14,7 @@ const count = ref(0)
     <div className="container">
       <h1>Open Component Header</h1>
     <h3>Header is in Vue</h3>
-     <button className="button" @click="count++">Count is: {{ count }}</button>
+     <div className="button" id='count'>Picture Change {{ count }} Time</div>
     </div>
 </div>
 </template>
@@ -26,7 +32,7 @@ const count = ref(0)
 .button {
   background-color: #a97613;
   border: none;
-  padding: 15px 32px;
+  padding: 20px 32px;
   text-align: center;
   font-size: 16px;
   margin-left: 30px;

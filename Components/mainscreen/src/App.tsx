@@ -30,7 +30,10 @@ const App = () => {
         {imageSources.map((src, index) => (
           <div key={index}>
             <img width="250" height="350" src={src} alt={`Image ${index + 1}`} />
-            <button className={styles.button} onClick={() => handleChangePicture(index)}>
+            <button className={styles.button} onClick={() => {
+              handleChangePicture(index)
+              window.oc.cart.addToCart()
+            }}>
               Change Picture
             </button>
           </div>

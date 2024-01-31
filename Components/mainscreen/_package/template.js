@@ -1,4 +1,4 @@
-var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b9026404406b8b3767278d27c38e166']=function(model) {
+var oc=oc||{};oc.components=oc.components||{};oc.components['0fb08d18a9928411cfa87712c5f237bfbe4943a3']=function(model) {
     var __toOcStaticPathUrl = function(args) {
       return model.component.props._staticPath + 'public/' + args;
     } 
@@ -7,7 +7,7 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b902640440
     var __$$oc_Settings__ = {id: model.id, staticPath: _staticPath, baseUrl: _baseUrl, name: _componentName, version: _componentVersion};
     var innerFn = function(model){
   oc.reactComponents = oc.reactComponents || {};
-  oc.reactComponents['b58146efe5a130745804a9bb7b38489f0978d0a3'] = oc.reactComponents['b58146efe5a130745804a9bb7b38489f0978d0a3'] || ((function() {
+  oc.reactComponents['7624788fde185ef947c067df0be5e3821de3f7dc'] = oc.reactComponents['7624788fde185ef947c067df0be5e3821de3f7dc'] || ((function() {
     var clientBundle = function(require$$0) {
   "use strict";
   var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
@@ -77,7 +77,10 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b902640440
             alt: `Image ${index + 1}`
           }), /* @__PURE__ */ jsxRuntimeExports.jsx("button", {
             className: styles.button,
-            onClick: () => handleChangePicture(index),
+            onClick: () => {
+              handleChangePicture(index);
+              window.oc.cart.addToCart();
+            },
             children: "Change Picture"
           })]
         }, index))
@@ -190,7 +193,7 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b902640440
   var staticPath = model.component.props._staticPath;
   if (ssr) {
     externals.push({
-      global: ['oc', 'components', 'fb60ba9c5b9026404406b8b3767278d27c38e166'],
+      global: ['oc', 'components', '0fb08d18a9928411cfa87712c5f237bfbe4943a3'],
       url: staticPath + 'template.js',
       name: "template"
     });
@@ -201,7 +204,7 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b902640440
   var count = oc.__reactTemplate.count;
   var templateId = "oc-reactRoot-mainscreen-" + count;
   oc.__reactTemplate.count++;
-  var ssrCall = 'oc.components["fb60ba9c5b9026404406b8b3767278d27c38e166"]({ component: { props:' + props + ' } });';
+  var ssrCall = 'oc.components["0fb08d18a9928411cfa87712c5f237bfbe4943a3"]({ component: { props:' + props + ' } });';
 
   return '<div id="' + templateId + '" class="oc-reactRoot-mainscreen">' + modelHTML + '</div>' +
     '<style>._maincontainer_173uz_1 {  background-color:#a97613;  color: #fff;  font-family: sans-serif;  padding: 40px;  display: flex;  justify-content: space-evenly;}._button_173uz_10 {  background-color: #3b246c;  border: none;  padding: 15px 32px;  text-align: center;  font-size: 16px;  margin-left: 30px;  margin-top: 30px;  text-decoration: none;  display: inline-block;  color: inherit;  cursor: pointer;}._info_173uz_24 {  margin-bottom: 20px;}._block_173uz_28 {  margin: 6px 0;}._button_173uz_10:hover {  background-color: #c79535;}</style>' +
@@ -214,8 +217,8 @@ var oc=oc||{};oc.components=oc.components||{};oc.components['fb60ba9c5b902640440
         'var targetNode = document.getElementById("' + templateId + '");' +
         'targetNode.setAttribute("id","");' +
         (ssr ? ssrCall : '') +
-        'oc.components["fb60ba9c5b9026404406b8b3767278d27c38e166"]({ component: { props:' + props + ' } });' +
-        'oc.reactComponents["b58146efe5a130745804a9bb7b38489f0978d0a3"](' + props + ', targetNode, ' + !!modelHTML  + ');' +
+        'oc.components["0fb08d18a9928411cfa87712c5f237bfbe4943a3"]({ component: { props:' + props + ' } });' +
+        'oc.reactComponents["7624788fde185ef947c067df0be5e3821de3f7dc"](' + props + ', targetNode, ' + !!modelHTML  + ');' +
       '});' +
     '});' +
   '</script>'
